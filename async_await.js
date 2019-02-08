@@ -1,6 +1,6 @@
 
 async function displayMovies(){
-
+try{	
     const customer = await getCustomer(1);
     console.log('customer',customer);
     if(customer.isGold){
@@ -10,6 +10,9 @@ async function displayMovies(){
       console.log('email sent');
     }
 
+}catch(err){
+console.log('error', err.message);
+}
 }
 displayMovies();
 
